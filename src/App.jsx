@@ -19,7 +19,7 @@ const sections = [
     Semester: 5 | CGPA: 9.48
 
     📚 12th CBSE
-    Swami Vivekanand Govt Model School, Block Pindwara
+    Swami Vivekanand Govt Model School, Pindwara
     Percentage: 70.2%
 
     📚 10th RBSE
@@ -125,6 +125,8 @@ style={{
   color: "white",
   minHeight: "100vh",
   fontFamily: "Arial, sans-serif",
+  padding: "0",
+  margin: "0",
 }}
 >
 {/* NAVBAR */}
@@ -282,13 +284,13 @@ borderBottom: "1px solid #374151",
     id="home"
     style={{
       animation: "fadeUp 1.2s ease",
-      minHeight: "90vh",
+      minHeight: "auto",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
       textAlign: "center",
-      padding: "40px 20px",
+      padding: "40px 20px 60px",
     }}
   >
     <img
@@ -300,16 +302,18 @@ borderBottom: "1px solid #374151",
         borderRadius: "50%",
         objectFit: "cover",
         border: "5px solid #8b5cf6",
-        boxShadow: "0 0 40px #8b5cf6",
+        boxShadow:"0 0 30px rgba(168,85,247,0.7), 0 0 80px rgba(168,85,247,0.3)",
       }}
     />
 
     <h1
       style={{
+        marginBottom: "0",
         background: "linear-gradient(90deg,#a855f7,#3b82f6)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
-        fontSize: "clamp(3rem,8vw,5rem)",
+        fontSize: "clamp(2.5rem,10vw,5rem)",
+        lineHeight: "1.1",
       }}
 >
       Ashish Suthar
@@ -317,6 +321,7 @@ borderBottom: "1px solid #374151",
 
     <p
       style={{
+        marginTop: "10px",
         color: "white",
         fontSize: "clamp(1rem,4vw,1.5rem)",
         maxWidth: "700px",
@@ -391,14 +396,16 @@ borderBottom: "1px solid #374151",
       key={section.id}
       id={section.id}
       style={{
-        width: "90%",
+        width: "calc(100% - 30px)",
         maxWidth: "1100px",
+        boxSizing: "border-box",
+        overflow: "hidden",
         margin: "30px auto",
         padding: "clamp(20px,4vw,40px)",
         background: "rgba(17,24,39,0.95)",
         borderRadius: "20px",
-        border: "1px solid #374151",
-        boxShadow: "0 0 20px rgba(168,85,247,0.15)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
+        border: "1px solid rgba(168,85,247,0.25)",
         scrollMarginTop: "120px",
       }}
     >
@@ -454,6 +461,10 @@ borderBottom: "1px solid #374151",
   <pre
     style={{
       whiteSpace: "pre-wrap",
+      overflowWrap: "break-word",
+      wordBreak: "break-word",
+      maxWidth: "100%",
+      margin: 0,
       fontFamily: "Arial",
       color: "#d1d5db",
       lineHeight: "1.8",
