@@ -1,6 +1,7 @@
 import profile from "./assets/profile.jpeg";
 import cert1 from "./assets/cert1.pdf";
 import cert2 from "./assets/cert2.pdf";
+import resume from "./assets/resume.pdf";
 
 export default function App() {
 const sections = [
@@ -28,7 +29,7 @@ const sections = [
     {
       id: "skills",
       title: "Skills",
-      content: `Python • Java • C++ • HTML • CSS • Git • GitHub • AI • Machine Learning • Data Science`,
+      content: ` • Python\n • Java\n • C++\n • HTML\n • CSS\n • Git\n • GitHub\n • Artificial Intelligence\n • Machine Learning\n • Data Science\n`,
     },
     {
       id: "projects",
@@ -114,13 +115,16 @@ const animations = `
 return (
 <div
 style={{
-background:
-"linear-gradient(-45deg,#09090b,#111827,#4c1d95,#09090b)",
-backgroundSize: "400% 400%",
-animation: "gradient 15s ease infinite",
-color: "white",
-minHeight: "100vh",
-fontFamily: "Arial, sans-serif",
+  background: `
+    radial-gradient(circle at 20% 20%, rgba(177, 118, 233, 0.25), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(43, 106, 209, 0.25), transparent 30%),
+    #050505
+  `,
+  backgroundSize: "400% 400%",
+  animation: "gradient 15s ease infinite",
+  color: "white",
+  minHeight: "100vh",
+  fontFamily: "Arial, sans-serif",
 }}
 >
 {/* NAVBAR */}
@@ -291,7 +295,6 @@ borderBottom: "1px solid #374151",
       src={profile}
       alt="Ashish Suthar"
       style={{
-        animation: "float 4s ease-in-out infinite",
         width: "min(250px,70vw)",
         height: "min(250px,70vw)",
         borderRadius: "50%",
@@ -303,12 +306,12 @@ borderBottom: "1px solid #374151",
 
     <h1
       style={{
-        fontSize: "clamp(2.5rem,7vw,4.5rem)",
-        marginTop: "20px",
-        marginBottom: "10px",
-        animation: "glow 2s ease-in-out infinite alternate",
+        background: "linear-gradient(90deg,#a855f7,#3b82f6)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        fontSize: "clamp(3rem,8vw,5rem)",
       }}
-    >
+>
       Ashish Suthar
     </h1>
 
@@ -332,23 +335,44 @@ borderBottom: "1px solid #374151",
         marginTop: "25px",
       }}
     >
-      <button
+      <a
+        href={resume}
+        target="_blank"
+        rel="noreferrer"
         style={{
           background: "#8b5cf6",
           color: "white",
-          border: "none",
+          textDecoration: "none",
           padding: "14px 24px",
           borderRadius: "10px",
-          cursor: "pointer",
           fontWeight: "bold",
+          display: "inline-block",
+        }}
+      >
+        View Resume
+      </a>
+
+      <a
+        href={resume}
+        download="Ashish_Suthar_Resume.pdf"
+        style={{
+          background: "#8b5cf6",
+          color: "white",
+          textDecoration: "none",
+          padding: "14px 24px",
+          borderRadius: "10px",
+          fontWeight: "bold",
+          display: "inline-block",
+          marginLeft: "2px",
         }}
       >
         Download Resume
-      </button>
+      </a>
 
       <a
         href="#contact"
         style={{
+          scrollBehavior: "smooth",
           border: "2px solid #8b5cf6",
           color: "white",
           textDecoration: "none",
