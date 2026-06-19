@@ -120,7 +120,6 @@ style={{
     radial-gradient(circle at 80% 30%, rgba(43, 106, 209, 0.25), transparent 30%),
     #050505
   `,
-  backgroundSize: "400% 400%",
   animation: "gradient 15s ease infinite",
   color: "white",
   minHeight: "100vh",
